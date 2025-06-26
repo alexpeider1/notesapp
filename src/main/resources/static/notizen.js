@@ -19,12 +19,12 @@ function ladeNotizen() {
 }
 
 function addNotizen(){
-    const title = document.getElementById('title'); //Titel aus HTML lesen
-    const content = document.getElementById('content'); //content aus HTML lesen
+    const titleInput   = document.getElementById('noteTitle'); //Titel-Feld aus HTML lesen
+    const contentInput = document.getElementById('noteContent'); //content-Feld aus HTML lesen
 
     //wenn ein Feld leer, alert anzeigen
-    if (!title || !content) {
-        alert("Titel und Inhalt eingeben!")
+    if (titleInput.value.trim() == null || contentInput.value.trim() == null) {
+        alert("Titel und Inhalt eingeben!");
         return;
     }
 
@@ -33,13 +33,13 @@ function addNotizen(){
         headers: {'Content-Type': 'application/json'}, //JSON wird gesendet
         //Daten in JSON String umwandeln
         body: JSON.stringify({
-            title: title.value,
-            content: content.value
+            title: titleInput.value,
+            content: contentInput.value
         })
     }).then(() => {
         //HTML nach Speichern leeren
-        title.value = '';
-        content.value = '';
+        titleInput.value = '';
+        contentInput.value = '';
 
         ladeNotizen(); //Notizen neu laden
     });
