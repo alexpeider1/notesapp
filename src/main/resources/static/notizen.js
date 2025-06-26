@@ -52,7 +52,7 @@ function loeschen(id) {
 
 function bearbeiten(id, title, content) {
     const neuerTitle = prompt("Neuer Titel", title);
-    const neuerContent = prompt("Neuer Titel", content);
+    const neuerContent = prompt("Neuer Text", content);
 
     if (neuerTitle && neuerContent) {
         fetch('/api/notes/' + id, { //PUT request an Backend mit ID
