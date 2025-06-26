@@ -1,0 +1,89 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    border: 2px solid lightgray;
+    border-radius: 10px;
+}
+
+h1 {
+    text-align: center;
+    color: navy;
+    margin-bottom: 20px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+button {
+    background-color: dodgerblue;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: royalblue;
+}
+
+.note {
+    background-color: aliceblue;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    padding: 15px;
+    margin-top: 15px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.note h3 {
+    margin: 0 0 10px 0;
+    color: black;
+}
+
+.note p {
+    margin: 0 0 10px 0;
+    color: dimgray;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    white-space: pre-wrap;
+}
+
+.note button {
+    background-color: lightgray;
+    color: black;
+    border: none;
+    padding: 6px 12px;
+    font-size: 14px;
+    border-radius: 4px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.note button:hover {
+    background-color: gray;
+    color: white;
+}
